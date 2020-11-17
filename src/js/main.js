@@ -1,5 +1,10 @@
 'use strict';
-const countDate = new Date('jan 1, 2021 00:00:00').getTime();
+const year = 2021;
+
+const yearBlock = document.getElementById('year');
+yearBlock.textContent = year;
+
+const countDate = new Date(`jan 1, ${year} 00:00:00`).getTime();
 
 const counter = ()=>{
   const timeNow = new Date().getTime(),
@@ -23,3 +28,5 @@ const counter = ()=>{
 
 counter();
 setInterval(()=>counter(), 1000);
+
+console.log('%c Waiting...', 'padding: 20px 0;color:#fff;text-transform:capitalize;font-size:3em;');

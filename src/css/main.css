@@ -18,6 +18,7 @@ body {
   height: 100vh;
   background: #ff4e2b;
   display: flex;
+  overflow: hidden;
 }
 
 .container .img {
