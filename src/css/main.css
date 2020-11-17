@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #ff4e2b;
+  display: flex;
+}
+
+.container .img {
+  position: relative;
+  width: 450px;
+  height: 100%;
+  background: #000;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/27/18/39/new-years-eve-1283521_1280.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 450px);
+}
+
+.container .countdown__title {
+  text-align: center;
+}
+
+.container .countdown__title h1 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.container .countdown__title h1 #year {
+  display: block;
+  font-size: 2.5em;
+}
+
+.container .counter {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .counter div {
+  position: relative;
+  width: 100px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: -25px;
+}
+
+.container .counter div::before {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  font-size: 0.35em;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.container .counter #day::before {
+  content: "Days";
+}
+
+.container .counter #hour::before {
+  content: "Hours";
+}
+
+.container .counter #minute::before {
+  content: "Minutes";
+}
+
+.container .counter #second::before {
+  content: "Seconds";
+}
+
+@media (max-width: 991px) {
+  .container .img {
+    display: none;
+  }
+  .container .countdown {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container .countdown__title h1 {
+    font-size: 1.5em !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
